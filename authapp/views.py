@@ -1,10 +1,14 @@
 import os
 
 from django.contrib import messages
+<<<<<<< HEAD
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
 from django.http.response import HttpResponseRedirect
 from django.urls import reverse_lazy
+=======
+from django.contrib.auth.views import LoginView, LogoutView
+>>>>>>> a8e9d11 (lesson_5 Logout fix)
 from django.utils.safestring import mark_safe
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import TemplateView
@@ -36,6 +40,7 @@ class CustomLoginView(LoginView):
 class CustomLogoutView(LogoutView):
     def dispatch(self, request, *args, **kwargs):
         messages.add_message(self.request, messages.INFO, _("See you later!"))
+<<<<<<< HEAD
         return super().dispatch(request, *args, **kwargs)
 
 
@@ -120,3 +125,6 @@ class ProfileEditView(LoginRequiredMixin, TemplateView):
 =======
         return HttpResponseRedirect(reverse_lazy("authapp:profile_edit"))
 >>>>>>> 0800c5f (lesson_5 Authapp done)
+=======
+        return super().dispatch(request, *args, **kwargs)
+>>>>>>> a8e9d11 (lesson_5 Logout fix)
