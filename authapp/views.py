@@ -72,6 +72,9 @@ class RegisterView(TemplateView):
             )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0800c5f (lesson_5 Authapp done)
 =======
 >>>>>>> 0800c5f (lesson_5 Authapp done)
             return HttpResponseRedirect(reverse_lazy("authapp:register"))
@@ -106,10 +109,14 @@ class ProfileEditView(LoginRequiredMixin, TemplateView):
                 mark_safe(f"Something goes worng:<br>{exp}"),
             )
 <<<<<<< HEAD
+<<<<<<< HEAD
         return HttpResponseRedirect(reverse_lazy("authapp:profile_edit"))
 =======
             return HttpResponseRedirect(reverse_lazy("authapp:register"))
 >>>>>>> 60418e6 (lesson_5 Registration)
+=======
+        return HttpResponseRedirect(reverse_lazy("authapp:profile_edit"))
+>>>>>>> 0800c5f (lesson_5 Authapp done)
 =======
         return HttpResponseRedirect(reverse_lazy("authapp:profile_edit"))
 >>>>>>> 0800c5f (lesson_5 Authapp done)
