@@ -1,0 +1,23 @@
+server {
+    listen 80;
+    server_name Denis-VirtualBox;
+    location = /favicon.ico
+
+    {
+        access_log off;
+        log_not_found off;
+    }
+
+    location /static/ {
+        root /home/django/BraniacLMS;
+    }
+
+    location /media/ {
+        root /home/django/BraniacLMS;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/django/BraniacLMS/braniaclms.sock;
+    }
+}

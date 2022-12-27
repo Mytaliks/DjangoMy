@@ -1,0 +1,5 @@
+# Найти и выставить значение
+PermitRootLogin no
+
+# Найти, раскомментировать, выставить значение
+PasswordAuthentication no
